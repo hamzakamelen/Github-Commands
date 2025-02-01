@@ -8,6 +8,13 @@
 
 2. **GitHub Account**: Create an account at [GitHub](https://github.com) if you don't have one already.
 
+3. **Configure Git (first time setup)**
+Set up your user name and email address for Git:
+
+```bash
+git config --global user.name "Your Name"
+git config --global user.email "your.email@example.com"
+```
 ## Steps to Push a Repository to GitHub
 
 1. **Create a New Repository on GitHub**
@@ -16,9 +23,15 @@
    - Give it a name and click **Create repository**. Do not initialize with a README, .gitignore, or license.
 
 2. **Initialize a Git Repository Locally**
+
    If you haven't already initialized your project folder as a Git repository, open a terminal/command prompt and run:
    ```bash
    git init
+   ```
+
+- Check the Status of git repo
+   ```bash
+   git status
    ```
 
 3. **Add Your Files to the Repository**
@@ -32,7 +45,10 @@
    ```bash
    git commit -m "Initial commit"
    ```
-
+- **Select the branch**
+  ```bash
+  git branch -M main
+  ```
 5. **Add the Remote Repository**
    Add the URL of your GitHub repository as a remote origin:
    ```bash
@@ -41,11 +57,6 @@
 
 6. **Push Your Local Repository to GitHub**
    Push your changes to GitHub:
-   ```bash
-   git push -u origin master
-   ```
-
-   If you're using Git version 2.28 or newer, the default branch might be `main` instead of `master`. In that case, use:
    ```bash
    git push -u origin main
    ```
